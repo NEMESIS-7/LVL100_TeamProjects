@@ -1,0 +1,2 @@
+### BRIEF NOTE ON POLYMORPHISM By Elikem and EwuraAbena 
+Polymorphism in Object Oriented Programming refers to the ability of different objects to respond to the same method call in different ways.This can be achieved in two ways; method overloading(compile-time polymorphism) and method overriding(runtime polymorphism).
