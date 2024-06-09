@@ -1,0 +1,90 @@
+import java.util.List;
+import java.util.ArrayList;
+
+// Employee Class
+class Employee {
+    private String name;
+    private int id;
+
+    // Constructor
+    public Employee(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    // Getters and setters
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee [name=" + name + ", id=" + id + "]";
+    }
+}
+
+// Department Class
+class Department {
+    private String name;
+    private List<Employee> employees;
+
+    // Constructor
+    public Department(String name) {
+        this.name = name;
+        this.employees = new ArrayList<>();
+    }
+
+    // Method to add employee to department
+    public void addEmployee(Employee employee) {
+        employees.add(employee);
+    }
+
+    // Getters and setters
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    @Override
+    public String toString() {
+        return "Department [name=" + name + ", employees=" + employees + "]";
+    }
+}
+
+// Main Class
+public class Main {
+    public static void main(String[] args) {
+        // Create some employees
+        Employee emp1 = new Employee("Alice", 101);
+        Employee emp2 = new Employee("Bob", 102);
+
+        // Create a department
+        Department dept = new Department("Human Resources");
+
+        // Add employees to the department
+        dept.addEmployee(emp1);
+        dept.addEmployee(emp2);
+
+        // Display department information
+        System.out.println(dept);
+    }
+}
