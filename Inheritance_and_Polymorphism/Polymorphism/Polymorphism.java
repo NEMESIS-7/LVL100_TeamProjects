@@ -1,4 +1,9 @@
+//Method Overloading(runtime polymorphism)
+
 class Calculator {
+    public int add(){           //method overloading
+        return 0;
+    }
     // Method to add two integers
     public int add(int a, int b) {
         int sum;
